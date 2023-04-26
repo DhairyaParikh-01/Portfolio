@@ -84,6 +84,11 @@ nav {
             content: 'CONTACT';
         }
     }
+    a.portfolio-link{
+        &:after{
+            content: 'PORTFOLIO';
+        }
+    }
     a.active{
         svg {
             color: #ffd700;
@@ -114,4 +119,64 @@ ul{
             }
         }
     }
+}
+
+.hamburger-icon,
+.close-icon{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .nav-bar{
+        background: transparent;
+        position: initial;
+        height: auto;
+        min-width: auto;
+        min-height: 150px;
+
+        ul, nav{
+            display: none;
+        }
+
+        nav {
+            display: none;
+            width: 100%;
+            background: #181818;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 2;
+            margin: 0;
+    
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            a:after{
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10px;
+            }
+    
+            a svg{
+                opacity: 1 !important;
+            }
+
+            &.mobile-show{
+                display: block;
+            }
+        }
+    
+        .hamburger-icon, 
+        .close-icon{
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            
+        }
+    }   
 }
