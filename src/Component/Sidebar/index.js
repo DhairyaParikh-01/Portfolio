@@ -48,7 +48,7 @@ const Sidebar  = () =>{
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/dhairya1616/">
+                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/dhairya.parikh_/">
                         <FontAwesomeIcon icon={faInstagram} color="#4d4d4e"/>
                     </a>
                 </li>

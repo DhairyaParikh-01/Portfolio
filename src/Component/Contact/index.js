@@ -16,28 +16,18 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault()
-    
-        // emailjs
-        //   .sendForm('gmail', 'service_moclcbk', form.current, 'CHJYx_CbsVw6g4oVHFMTu')
-        //   .then(
-        //     () => {
-        //       alert('Message successfully sent!')
-        //       window.location.reload(false)
-        //     },
-        //     () => {
-        //       alert('Failed to send the message, please try again')
-        //     }
-        //   )
-          emailjs.sendForm('service_94xpitb', 'template_1948dcz', form.current, '27BVlxl4X53mlqKJs')
-          .then(function(response) {
-             console.log('SUCCESS!', response.status, response.text);
-              alert('Message successfully sent!')
-              window.location.reload(false)
-          }, function(error) {
-             console.log('FAILED...', error);
-             alert('Failed to send the message, please try again')
-          });
-      }
+
+        // Sending an email using Email.js library.
+        emailjs.sendForm('service_94xpitb', 'template_1948dcz', form.current, '27BVlxl4X53mlqKJs')
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message successfully sent!')
+                window.location.reload(false)
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert('Failed to send the message, please try again')
+            });
+    }
     return (
         <>
             <div className="container contact-page">
@@ -53,39 +43,39 @@ const Contact = () => {
                         questions, don't hesitate to contact me using below form either.
                     </p>
                     <div className="contact-form">
-                    <form ref={form} onSubmit={sendEmail}>
-                        <ul>
-                            <li className="half">
-                                <input placeholder="Name" type="text" name="name" required />
-                            </li>
-                            <li className="half">
-                                <input
-                                    placeholder="Email"
-                                    type="email"
-                                    name="email"
-                                    required
-                                />
-                            </li>
-                            <li>
-                                <input
-                                    placeholder="Subject"
-                                    type="text"
-                                    name="subject"
-                                    required
-                                />
-                            </li>
-                            <li>
-                                <textarea
-                                    placeholder="Message"
-                                    name="message"
-                                    required
-                                ></textarea>
-                            </li>
-                            <li>
-                                <input type="submit" className="flat-button" value="SEND" />
-                            </li>
-                        </ul>
-                    </form>
+                        <form ref={form} onSubmit={sendEmail}>
+                            <ul>
+                                <li className="half">
+                                    <input placeholder="Name" type="text" name="name" required />
+                                </li>
+                                <li className="half">
+                                    <input
+                                        placeholder="Email"
+                                        type="email"
+                                        name="email"
+                                        required
+                                    />
+                                </li>
+                                <li>
+                                    <input
+                                        placeholder="Subject"
+                                        type="text"
+                                        name="subject"
+                                        required
+                                    />
+                                </li>
+                                <li>
+                                    <textarea
+                                        placeholder="Message"
+                                        name="message"
+                                        required
+                                    ></textarea>
+                                </li>
+                                <li>
+                                    <input type="submit" className="flat-button" value="SEND" />
+                                </li>
+                            </ul>
+                        </form>
                     </div>
                 </div>
                 <div className="info-map">
@@ -93,15 +83,14 @@ const Contact = () => {
                     <br />
                     India,
                     <br />
-                    14-B, Parichay Park, waghodia road <br />
                     Vadodara, Gujarat. 390019 <br />
                     <br />
-                    <span>freelancerslobodan@gmail.com</span>
+                    <span>dhairyaparikh1002@gmail.com</span>
                 </div>
             </div>
             <Loader type="pacman" />
         </>
-            )
+    )
 }
 
-            export default Contact
+export default Contact

@@ -1,10 +1,11 @@
 .contact-form {
     width: 100%;
-    margin-top: 70%;
-  
+    margin-top: 50px;
+
     ul {
       padding: 0;
       margin: 0;
+      position: relative;
   
       li {
         padding: 0;
@@ -71,4 +72,39 @@
       text-align: center;
       margin-right: 10px;
     }
+}
+
+.info-map {
+  position: absolute;
+  background: #000;
+  top: 30%;
+  right: 13%;
+  z-index: 999999;
+  width: 267px;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+
+    span {
+      color: #ffd700;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container.contact-page .text-zone{
+    width: 80%;
+  }
+
+  .info-map{
+    display: none;
+  }
 }
