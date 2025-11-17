@@ -37,7 +37,7 @@ const Home = () => {
                             idx={28} />
                     </h1>
                     <h2>MERN stack Developer | web developer | Software Engineer</h2>
-                    <Link to="contact" className="flat-button">CONTACT ME</Link>
+                    <Link to="/contact" className="flat-button">CONTACT ME</Link>
                 </div>
                 <div className="text-zone-2">
                     <svg data-name="Layer 1" viewBox="0 0 786.82 572.26" xmlns="http://www.w3.org/2000/svg">

@@ -17,7 +17,7 @@ const Sidebar  = () =>{
                 <img src={LogoSubtitle} className="sub-logo" alt="slobdan" />
             </Link>
             <nav className={showNav ? 'mobile-show' : ''}>
-                <NavLink exact="true" activeclassname="active" to="/" onClick={() => setShowNav(false)}>
+                <NavLink exact="true" activeclassname="active" to="/Portfolio" onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon >
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="about-link" to="/about" onClick={() => setShowNav(false)}>
